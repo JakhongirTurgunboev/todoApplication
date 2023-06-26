@@ -54,13 +54,22 @@
                                 {{ task.task_text }}
                             </div>
                             <div class="col-md-auto">
-                                <input name="{{task.id}}" class="form-check-input" type="checkbox" id="{{forloop.counter}}">
+                                {% if task.status %}
+                                <input name="{{task.id}}" class="form-check-input"
+                                       type="checkbox" id="{{forloop.counter}}" checked>
                                 <label class="form-check-label" for="{{forloop.counter}}">
                                     Bajarildi?
                                 </label>
+                                {% else %}
+                                <input name="{{task.id}}" class="form-check-input"
+                                       type="checkbox" id="{{forloop.counter}}">
+                                <label class="form-check-label" for="{{forloop.counter}}">
+                                    Bajarildi?
+                                </label>
+                                {% endif %}
                             </div>
                             <div class="col col-lg-2">
-                                <button class="btn btn-danger">Delete</button>
+                                    <button class="btn btn-danger" name="delete{{task.id}}" value="{{task.id}}" type="submit">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -72,5 +81,6 @@
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
+
 </body>
 </html>
