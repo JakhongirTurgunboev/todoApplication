@@ -1,3 +1,5 @@
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Task
 # Create your views here.
@@ -9,12 +11,13 @@ def deleteTask(request, pk):
     return redirect('/')
 
 
+@login_required(login_url='/users/register')
 def taskView(request):
+    user = request.user
     if request.method == 'POST':
         items = request.POST.dict()
-        print(items)
         if items.get('title') is not None and items.get('text') is not None:
-            task = Task(title=items["title"], task_text=items["text"])
+            task = Task(title=items["title"], task_text=items["text"], user=user)
             task.save()
         else:
             tasks = Task.objects.all()
@@ -34,5 +37,5 @@ def taskView(request):
                         task = Task.objects.get(id=id)
                         task.delete()
         return redirect('/')
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(user=user.id)
     return render(request, "task/tasks.html", context={"tasks": tasks})

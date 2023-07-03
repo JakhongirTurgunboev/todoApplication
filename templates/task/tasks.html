@@ -11,6 +11,9 @@
     <link href="{% static 'style.css' %}">
 </head>
 <body>
+<nav class="navbar navbar-light bg-light justify-content-end">
+    <button class="btn btn-danger"><a href="/users/logout">Logout</a> </button>
+</nav>
 <div class="container">
     <form method="post" id="form1" name="form1">
         {% csrf_token %}
