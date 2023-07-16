@@ -16,8 +16,9 @@
         {% csrf_token %}
         <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-danger"><a href="/users/logout">Logout</a> </button>
       </form>
-    <button class="btn btn-danger"><a href="/users/logout">Logout</a> </button>
+
 </nav>
 <div class="container">
     <form method="post" id="form1" name="form1">
