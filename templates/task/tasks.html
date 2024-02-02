@@ -44,13 +44,19 @@
                 <button class="accordion-button collapsed bg-success" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-{{ forloop.counter }}" aria-expanded="false"
                         aria-controls="flush-{{ forloop.counter }}">
+                    <div class="d-flex justify-content-between w-auto">
                     {{ task.title }}
+                    {{task.created_at | date:"Y-m-d"}}
+                    </div>
                 </button>
                 {% else %}
                 <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-{{ forloop.counter }}" aria-expanded="false"
                         aria-controls="flush-{{ forloop.counter }}">
+                    <div class="d-flex justify-content-between">
                     {{ task.title }}
+                    {{task.created_at | date:"Y-m-d"}}
+                    </div>
                 </button>
                 {% endif %}
             </h2>
@@ -90,6 +96,12 @@
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
-
+<!--
+<form name="new_form" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+-->
 </body>
 </html>

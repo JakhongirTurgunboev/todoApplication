@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="27">
+          <list size="41">
             <item index="0" class="java.lang.String" itemvalue="python-deriv-api" />
             <item index="1" class="java.lang.String" itemvalue="typing_extensions" />
             <item index="2" class="java.lang.String" itemvalue="websockets" />
@@ -32,6 +32,20 @@
             <item index="24" class="java.lang.String" itemvalue="click" />
             <item index="25" class="java.lang.String" itemvalue="Jinja2" />
             <item index="26" class="java.lang.String" itemvalue="Flask" />
+            <item index="27" class="java.lang.String" itemvalue="pywin32" />
+            <item index="28" class="java.lang.String" itemvalue="PyJWT" />
+            <item index="29" class="java.lang.String" itemvalue="texttable" />
+            <item index="30" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="31" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="32" class="java.lang.String" itemvalue="pipenv" />
+            <item index="33" class="java.lang.String" itemvalue="virtualenv-clone" />
+            <item index="34" class="java.lang.String" itemvalue="filelock" />
+            <item index="35" class="java.lang.String" itemvalue="platformdirs" />
+            <item index="36" class="java.lang.String" itemvalue="Faker" />
+            <item index="37" class="java.lang.String" itemvalue="certifi" />
+            <item index="38" class="java.lang.String" itemvalue="virtualenv" />
+            <item index="39" class="java.lang.String" itemvalue="distlib" />
+            <item index="40" class="java.lang.String" itemvalue="urllib3" />
           </list>
         </value>
       </option>
@@ -42,6 +56,12 @@
           <option value="tensorflow.compat" />
           <option value="Tensorflow.scripts.generate_tfrecord.*" />
           <option value="django.db.models.fields.FloatField.__truediv__" />
+          <option value="core.settings.settings" />
+          <option value="tensorflow.*" />
+          <option value="aiogram.contrib" />
+          <option value="aiogram.types.ParseMode" />
+          <option value="django.db.models.fields.DecimalField.__mul__" />
+          <option value="django.db.models.*" />
         </list>
       </option>
     </inspection_tool>
